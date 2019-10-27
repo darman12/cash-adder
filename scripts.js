@@ -2,12 +2,27 @@ init();
 
 function init() {
     calculate_button = document.getElementById("calculate-button");
-    calculate_button.addEventListener('click', calculateTotal);
+    
+    fields = document.querySelectorAll("input");
+    fields.forEach((field) => {
+        field.addEventListener('change', () => {
+            updateTotal();
+        });
+    });
+
+    calculate_button.addEventListener('click', updateTotal);
 }
 
-function calculateTotal() {
-    console.log("getting input values");
-    bills = getInputValues();
+function updateTotal() {
+    bills = {
+        hundreds: 0,
+        twenties: 0,
+        tens: 0,
+        fives: 0,
+        ones: 0
+    }
+
+    getInputValues(bills);
 
     total = 0;
 
@@ -17,21 +32,11 @@ function calculateTotal() {
     total += bills.fives * 5;
     total += bills.ones;
 
-    console.log(total);
-    
     document.getElementById("total").innerHTML = `$${total}`;
 }
 
-function getInputValues() {
-    bills = {
-        hundreds: 0,
-        twenties: 0,
-        tens: 0,
-        fives: 0,
-        ones: 0
-    }
-
-    bills.hundreds= Number(document.getElementById("hundreds").value)
+function getInputValues(bills) {
+    bills.hundreds = Number(document.getElementById("hundreds").value)
     bills.twenties = Number(document.getElementById("twenties").value);
     bills.tens = Number(document.getElementById("tens").value);
     bills.fives = Number(document.getElementById("fives").value);
