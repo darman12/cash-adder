@@ -5,24 +5,29 @@
     </head>
     <body>
         <h1>Cash Adder</h1>
-        <form action="">
-            <label for="one-hundred">100 dollar bills </label>
-            <input type="text" name="one-hundred" id="hundreds" value="">
-            <br>
-            <label for="twenty">20 dollar bills </label>
-            <input type="text" name="twenty" id="twenties" value="">
-            <br>
-            <label for="ten">10 dollar bills </label>
-            <input type="text" name="ten" id="tens" value="">
-            <br>
-            <label for="five">5 dollar bills </label>
-            <input type="text" name="five" id="fives" value="">
-            <br>
-            <label for="one">1 dollar bills </label>
-            <input type="text" name="one" id="ones" value="">
-        </form>
+        <p>Enter quantity of each denomination:</p>
+
+        <label for="one-hundred">100's</label>
+        <input type="number" name="one-hundred" id="hundreds" placeholder="0" value="">
         <br>
-        <button id="calculate-button">Calculate</button>
+        
+        <label for="twenty">20's</label>
+        <input type="number" name="twenty" id="twenties" placeholder="0" value="">
+        <br>
+
+        <label for="ten">10's</label>
+        <input type="number" name="ten" id="tens" placeholder="0" value="">
+        <br>
+
+        <label for="five">5's</label>
+        <input type="number" name="five" id="fives" placeholder="0" value="">
+        <br>
+
+        <label for="one">1's</label>
+        <input type="number" name="one" id="ones" placeholder="0" value="">
+        <br>
+
+        <button id="calculate-button">Add Bills</button>
 
         <p>Total: <span id="total">$0</span></p>
 
