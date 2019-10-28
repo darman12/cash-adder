@@ -27,25 +27,31 @@ function updateTotal(bills, fieldId, total) {
         fives: 5,
         ones: 1
     }
+    
     originalBillQuantity = 1 * (bills[fieldId] * factors[fieldId]);
     
-    numBills = getInputValues(bills, fieldId);
-    validateInput(bills, fieldId);
+    billQuantity = getInputValues(fieldId);
 
-    total += (numBills * factors[fieldId]) - originalBillQuantity;
+    if (validateInput(billQuantity)) {
+        bills[fieldId] = billQuantity;
+        total += (billQuantity * factors[fieldId]) - originalBillQuantity;
+    } else {
+        document.getElementById(fieldId).value = 0;
+    }
 
     return total;
 }
 
-function getInputValues(bills, fieldId) {
-    bills[fieldId] = Number(document.getElementById(fieldId).value);
-    return bills[fieldId];
+function getInputValues(fieldId) {
+    return Number(document.getElementById(fieldId).value);
 }
 
-function validateInput(bills, fieldId) {
-    if (bills[fieldId] < 0) {
-        console.log(`Less than 0 ${fieldId}`);
+function validateInput(billQuantity) {
+    if (billQuantity < 0) {
+        console.log(`Less than 0`);
+        return false;
     }
+    return true;
 }
 
 function displayTotal(total) {
