@@ -9,33 +9,45 @@ function init() {
         ones: 0
     }
 
-    document.getElementById("calculate-button").addEventListener('click', updateTotal(bills));
+    let total = 0;
     
     document.querySelectorAll("input").forEach((field) => {
         field.addEventListener('change', () => {
-            updateTotal(bills);
+            total = updateTotal(bills, field.id, total);
+            displayTotal(total);
         });
     });
 }
 
-function updateTotal(bills) {
-    getInputValues(bills);
+function updateTotal(bills, fieldId, total) {
+    const factors = {
+        hundreds: 100,
+        twenties: 20,
+        tens: 10,
+        fives: 5,
+        ones: 1
+    }
+    originalBillQuantity = 1 * (bills[fieldId] * factors[fieldId]);
+    
+    numBills = getInputValues(bills, fieldId);
+    validateInput(bills, fieldId);
 
-    total = 0;
+    total += (numBills * factors[fieldId]) - originalBillQuantity;
 
-    total += bills.hundreds * 100
-        + bills.twenties * 20
-        + bills.tens * 10
-        + bills.fives * 5
-        + bills.ones;
-
-    document.getElementById("total").innerHTML = `$${total}`;
+    return total;
 }
 
-function getInputValues(bills) {
-    bills.hundreds = Number(document.getElementById("hundreds").value)
-    bills.twenties = Number(document.getElementById("twenties").value);
-    bills.tens = Number(document.getElementById("tens").value);
-    bills.fives = Number(document.getElementById("fives").value);
-    bills.ones = Number(document.getElementById("ones").value);
+function getInputValues(bills, fieldId) {
+    bills[fieldId] = Number(document.getElementById(fieldId).value);
+    return bills[fieldId];
+}
+
+function validateInput(bills, fieldId) {
+    if (bills[fieldId] < 0) {
+        console.log(`Less than 0 ${fieldId}`);
+    }
+}
+
+function displayTotal(total) {
+    document.getElementById("total").innerHTML = `$${total}`;
 }
