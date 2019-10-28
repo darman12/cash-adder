@@ -48,7 +48,6 @@ function getInputValues(fieldId) {
 
 function validateInput(billQuantity) {
     if (billQuantity < 0) {
-        console.log(`Less than 0`);
         return false;
     }
     return true;
