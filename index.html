@@ -6,33 +6,16 @@
         <title>Cash Adder</title>
     </head>
     <body>
-        <h1>Cash Adder</h1>
-        <p>Enter quantity of each denomination:</p>
-
-        <label for="one-hundred">100's</label>
-        <input type="number" name="one-hundred" id="hundreds" pattern="[0-9]*" placeholder="0" value="">
-        <br>
-        
-        <label for="twenty">20's</label>
-        <input type="number" name="twenty" id="twenties" pattern="[0-9]*" placeholder="0" value="">
-        <br>
-
-        <label for="ten">10's</label>
-        <input type="number" name="ten" id="tens" pattern="[0-9]*" placeholder="0" value="">
-        <br>
-
-        <label for="five">5's</label>
-        <input type="number" name="five" id="fives" pattern="[0-9]*" placeholder="0" value="">
-        <br>
-
-        <label for="one">1's</label>
-        <input type="number" name="one" id="ones" pattern="[0-9]*" placeholder="0" value="">
-        <br>
+        <div id="input-fields"></div>
 
         <button id="calculate-button">Add Bills</button>
 
         <p>Total: <span id="total">$0</span></p>
 
-        <script src="scripts.js"></script>
+        <script src="js/set_attributes.js"></script>
+        <script src="js/currency.js"></script>
+        <script src="js/cash_counter.js"></script>
+        <script src="js/app.js"></script>
+
     </body>
 </html>
