@@ -12,8 +12,10 @@ var gulp            = require('gulp'),
 // ordered array of javascript source files
 var sourceJS = [
     'src/js/set_attributes.js',
+    'src/js/create_fields.js',
     'src/js/currency.js',
     'src/js/cash_counter.js',
+    'src/js/resize_fields.js',
     'src/js/app.js'
 ];
 
@@ -65,5 +67,7 @@ function defaultTask(cb) {
     cb();
 }
 
+exports.styles = styles;
+exports.scriptsWithMap = scriptsWithSourcemap;
 exports.scripts = scripts;
 exports.default = defaultTask;

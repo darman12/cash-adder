@@ -5,3 +5,4 @@ CounterModule.init([
     {denomination: "fives", value: 5, representation: "5"},
     {denomination: "ones", value: 1, representation: "1"},
 ]);
+resizeFields();
