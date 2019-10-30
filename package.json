@@ -1,0 +1,33 @@
+{
+  "name": "cash-counter",
+  "version": "1.0.0",
+  "description": "Quick-and-dirty cash adder that supports USD.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/darman12/cash-adder.git"
+  },
+  "keywords": [],
+  "author": "Spencer Freebairn",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/darman12/cash-adder/issues"
+  },
+  "homepage": "https://github.com/darman12/cash-adder#readme",
+  "devDependencies": {
+    "@babel/core": "^7.6.4",
+    "@babel/preset-env": "^7.6.3",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-es2015": "^6.24.1",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-babel": "^8.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-uglify": "^3.0.2"
+  }
+}
