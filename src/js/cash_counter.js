@@ -8,7 +8,7 @@ var CounterModule = (function() {
     
         currency.init(currencyInfo);
     
-        for (i = 0; i < currency.getNumDenominations(); i++) {
+        for (let i = 0; i < currency.getNumDenominations(); i++) {
             denominationQuantities.push(0);
         }
     
@@ -16,8 +16,8 @@ var CounterModule = (function() {
     }
     
     function updateTotal(event, denominationValue) {
-        originalDenominationQuantity = denominationQuantities[event.target.id];
-        updatedQuantity = event.target.value;    
+        let originalDenominationQuantity = denominationQuantities[event.target.id];
+        let updatedQuantity = event.target.value;    
     
         if (updatedQuantity >= 0) {
             denominationQuantities[event.target.id] = updatedQuantity;
@@ -34,13 +34,13 @@ var CounterModule = (function() {
     }
     
     function createFields(currency) {
-        for (i = 0; i < currency.getNumDenominations(); i++) {
+        for (let i = 0; i < currency.getNumDenominations(); i++) {
             addInputField(currency, i)
         }
     }
     
     function addInputField(denomination, index) {
-        newField = document.createElement("input");
+        let newField = document.createElement("input");
     
         setAttributes(newField, [
             {"type": "number"},

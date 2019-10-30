@@ -9,7 +9,7 @@ var Currency = (function() {
 
     // removes items from arrays
     function reset() {
-        for (i = getNumDenominations(); i > 0; i--) {
+        for (let i = getNumDenominations(); i > 0; i--) {
             denominations.pop();
             values.pop();
             representations.pop();
