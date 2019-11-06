@@ -29,8 +29,8 @@ p {
 #wrapper {
     position: relative;
     left: 50%;
-    margin: 0 -200px;
-    width: 400px;
+    width: 300px;
+    margin: 50px -150px;
     background-color: white;
     border-radius: 30px;
 }
@@ -53,6 +53,34 @@ p {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: auto;
+
+    grid-gap: 1rem;
+}
+
+.input-area {
+    width: 100px;
+    height: 100px;
+
+    text-align: center;
+    font-size: 1.6rem;
+    
+    border-radius: 30px;
+    border: solid .5px var(--light-shadow);
+}
+
+.input-area:hover {
+    -moz-box-shadow: 0 0 1.5rem;
+    -webkit-box-shadow: 0 0 1.5rem;
+    -o-box-shadow: 0 0 1.5rem;
+    box-shadow: 0 0 1.5rem #44c2fc;
+}
+
+[type = number] {
+
+}
+
+[type = number]:hover {
+    
 }
 
 input::-webkit-outer-spin-button,
@@ -64,10 +92,6 @@ input::-webkit-inner-spin-button {
 
 input[type=number] {
     -moz-appearance:textfield; /* Firefox */
-}
-
-.input {
-    width: 100%;
 }
 
 .dark-shadow {

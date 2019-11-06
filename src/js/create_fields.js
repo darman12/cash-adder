@@ -12,7 +12,7 @@ function addInputField(denomination, index, callback) {
         {"id": `${index}`},
         {"name": `${denomination.getDenomination(index)}`},
         {"pattern": "[0-9]*"},
-        {"placeholder": "0"}
+        {"placeholder": "0"},
     ]);
     
     newField.addEventListener('change', (event) => {
@@ -26,8 +26,9 @@ function addInputField(denomination, index, callback) {
     let newDiv = document.createElement("div");
     newDiv.setAttribute("class", "input-area");
 
-    newDiv.appendChild(label);
     newDiv.appendChild(newField);
+    newDiv.appendChild(document.createElement("br"));
+    newDiv.appendChild(label);
 
     document.getElementById("input-fields").appendChild(newDiv);
 }

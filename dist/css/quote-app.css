@@ -1,2 +1,119 @@
+/***********
+* Contains style rules for the footer I use across my sites/web apps.
+*
+* The HTML for the footer is at the bottom for convenience.
+*/
+/*------ Footer content ------*/
+footer {
+  color: #a7a7a7;
+  position: absolute;
+  bottom: 0;
+  width: 100%; }
+
+footer > p {
+  margin: 0 auto;
+  text-align: center;
+  font-size: 1.6rem;
+  color: white;
+  line-height: 42px;
+  font-family: 'Nunito', Arial, Helvetica, sans-serif; }
+
+#attribution {
+  background-image: -webkit-gradient(linear, left top, right top, from(#44c2fc), to(#af44fc));
+  background-image: linear-gradient(to right, #44c2fc, #af44fc);
+  color: white; }
+
+#heart {
+  background: transparent; }
+
+#heart:hover {
+  color: red; }
+
+#github-logo {
+  position: relative;
+  top: 4px;
+  margin: 0 0 0 3px;
+  width: 2rem;
+  height: 2rem; }
+
+/******** Footer HTML ************
+
+<footer>
+    <p id="attribution">Created w/<i class="fas fa-heart" id="heart"></i> by Spencer Freebairn <a href="https://github.com/darman12/cash-adder" target="blank"><img id="github-logo" src="dist/assets//GitHub-Mark-Light-32px.png" alt="GitHub logo white"></a></p>
+</footer>
+*/
+:root {
+  /*------ Color variables ------*/
+  /* background colors */
+  --dark-grey: rgba(61, 61, 61, 1);
+  --dark-white: #f7f7f7;
+  /* text colors */
+  --light-text: rgb(167, 167, 167);
+  /* shadow colors */
+  --light-shadow: rgb(187, 187, 187);
+  --dark-shadow: rgb(97, 97, 97); }
+
 html {
-  font-family: Arial, Helvetica, sans-serif; }
+  font-family: 'Ubuntu', Arial, Helvetica, sans-serif;
+  font-size: 10px; }
+
+html * {
+  margin: 0;
+  padding: 0; }
+
+p {
+  font-size: 1.6rem; }
+
+#wrapper {
+  position: relative;
+  left: 50%;
+  width: 300px;
+  margin: 50px -150px;
+  background-color: white;
+  border-radius: 30px; }
+
+#output {
+  text-align: center;
+  border: dotted .5px red;
+  border-radius: 30px 30px 0 0;
+  padding: .8rem;
+  color: var(--light-shadow); }
+  #output p {
+    font-size: 3.2rem; }
+
+#input-fields {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto;
+  grid-gap: 1rem; }
+
+.input-area {
+  width: 100px;
+  height: 100px;
+  text-align: center;
+  font-size: 1.6rem;
+  border-radius: 30px;
+  border: solid 0.5px var(--light-shadow); }
+
+.input-area:hover {
+  -o-box-shadow: 0 0 1.5rem;
+  box-shadow: 0 0 1.5rem #44c2fc; }
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  /* display: none; <- Crashes Chrome on hover */
+  -webkit-appearance: none;
+  margin: 0;
+  /* <-- Apparently some margin are still there even though it's hidden */ }
+
+input[type=number] {
+  -moz-appearance: textfield;
+  /* Firefox */ }
+
+.dark-shadow {
+  -o-box-shadow: 0 0 1.5rem;
+  box-shadow: 0 0 1.5rem var(--dark-shadow); }
+
+.light-shadow {
+  -o-box-shadow: 0 0 1.5rem;
+  box-shadow: 0 0 1.5rem var(--light-shadow); }
