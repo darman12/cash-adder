@@ -21,10 +21,6 @@ var CounterModule = (function() {
         document.getElementById("total").innerHTML = `$${total}`;
     }
     
-    return {
-        init: init
-    }
-    
     function init(currencyInfo) {
     
         let currency = Currency;
@@ -38,5 +34,8 @@ var CounterModule = (function() {
         createFields(currency, updateTotal);
     }
 
+    return {
+        init: init
+    }
 }());
 
