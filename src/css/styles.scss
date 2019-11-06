@@ -55,6 +55,17 @@ p {
     grid-template-rows: auto;
 }
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+input[type=number] {
+    -moz-appearance:textfield; /* Firefox */
+}
+
 .input {
     width: 100%;
 }
@@ -71,49 +82,4 @@ p {
     -webkit-box-shadow: 0 0 1.5rem;
     -o-box-shadow: 0 0 1.5rem;
     box-shadow: 0 0 1.5rem var(--light-shadow);
-}
-
-
-
-
-/*------ Footer content ------*/
-footer {
-    color: rgb(167, 167, 167);
- 
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-}
-
-footer > p {
-    margin: 0 auto;
-    text-align: center;
-    font-size: 1.6rem;
-    color: white;
-
-    line-height: 42px;
-
-    font-family: 'Nunito', Arial, Helvetica, sans-serif;
-}
-
-#attribution {
-    background-image: linear-gradient(to right, #44c2fc, #af44fc);
-
-    color: white;
-}
-
-#heart {
-    background: transparent;
-}
-
-#heart:hover {
-    color: red;
-}
-
-#github-logo {
-    position: relative;
-    top: 4px;
-    margin: 0 0 0 3px;
-    width: 2rem;
-    height: 2rem;
 }
