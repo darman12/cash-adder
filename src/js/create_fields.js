@@ -24,11 +24,10 @@ function addInputField(denomination, index, callback) {
     label.innerHTML = `${denomination.getRepresentation(index)}` + "'s";
 
     let newDiv = document.createElement("div");
-    newDiv.setAttribute("class", "input-area");
+    newDiv.setAttribute("class", "input-field");
 
     newDiv.appendChild(newField);
-    newDiv.appendChild(document.createElement("br"));
     newDiv.appendChild(label);
 
-    document.getElementById("input-fields").appendChild(newDiv);
+    document.getElementById("input-area").appendChild(newDiv);
 }

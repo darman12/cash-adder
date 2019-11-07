@@ -5,4 +5,10 @@ CounterModule.init([
     {denomination: "fives", value: 5, representation: "5"},
     {denomination: "ones", value: 1, representation: "1"},
 ]);
-resizeFields();
+let screenHeight = window.innerHeight;
+let wrapper = document.getElementById("wrapper");
+
+wrapper.style.top = `${screenHeight / 2}`;
+wrapper.style.marginTop = `${wrapper.style.height / 2}`;
+console.log("hello there");
+console.log(`wrapper height ${wrapper.style.height}`);

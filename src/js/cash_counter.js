@@ -19,6 +19,15 @@ var CounterModule = (function() {
     
     function displayTotal(total) {
         document.getElementById("total").innerHTML = `$${total}`;
+        if (total > 0) {
+            document.getElementById("total").style.color = "black";
+            console.log(total);
+            console.log("setting total to black");
+        } else {
+            document.getElementById("total").style.color = "var(--light-shadow)";
+            console.log(total);
+            console.log("setting total to grey");
+        }
     }
     
     function init(currencyInfo) {

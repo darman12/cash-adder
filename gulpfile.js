@@ -15,7 +15,6 @@ var sourceJS = [
     'src/js/create_fields.js',
     'src/js/currency.js',
     'src/js/cash_counter.js',
-    'src/js/resize_fields.js',
     'src/js/app.js'
 ];
 
