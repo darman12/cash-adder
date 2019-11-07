@@ -12,12 +12,9 @@
     --dark-shadow: rgb(97, 97, 97);
  }
 
-html {
+html, html * {
     font-family: 'Ubuntu', Arial, Helvetica, sans-serif;
     font-size: 10px;
-}
-
-html * {
     margin: 0;
     padding: 0;
 }
@@ -112,6 +109,36 @@ input::-webkit-inner-spin-button {
 
 input[type=number] {
     -moz-appearance:textfield; /* Firefox */
+}
+
+#controls {
+    display: flex;
+    justify-content: space-around;
+    
+    height: 5rem;
+    margin: .5rem;
+    padding-bottom: 1rem;
+
+    button {
+
+        width: 10rem;
+        height: 5rem;
+        font-size: 1.6rem;
+
+        background-color: transparent;
+
+        border: solid .5px var(--light-shadow);
+        border-radius: 30px;
+    }
+
+    button:hover {
+        cursor: pointer;
+
+        -moz-box-shadow: 0 0 .75rem;
+        -webkit-box-shadow: 0 0 .75rem;
+        -o-box-shadow: 0 0 .75rem;
+        box-shadow: 0 0 .75rem #af44fc;
+    }
 }
 
 .dark-shadow {
