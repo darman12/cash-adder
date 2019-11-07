@@ -19,6 +19,7 @@ var CounterModule = (function() {
     
     function displayTotal(total) {
         document.getElementById("total").innerHTML = `$${total}`;
+        
         if (total > 0) {
             document.getElementById("total").style.color = "black";
             console.log(total);
