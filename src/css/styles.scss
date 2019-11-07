@@ -39,7 +39,6 @@ p {
     text-align: center;
     border-radius: 30px 30px 0 0;
     overflow-wrap: break-word;
-    //overflow: hidden;
 
     padding: .8rem;
     
@@ -65,6 +64,8 @@ p {
 
     text-align: center;
 
+    color: var(--dark-grey);
+
     label {
         position: relative;
         bottom: 1.6rem;
@@ -85,6 +86,16 @@ p {
 }
 
 [type = number]:hover {
+    -moz-box-shadow: 0 0 1.5rem;
+    -webkit-box-shadow: 0 0 1.5rem;
+    -o-box-shadow: 0 0 1.5rem;
+    box-shadow: 0 0 1.5rem #44c2fc;
+    
+}
+
+[type = number]:focus {
+    outline: none;
+
     -moz-box-shadow: 0 0 1.5rem;
     -webkit-box-shadow: 0 0 1.5rem;
     -o-box-shadow: 0 0 1.5rem;

@@ -21,7 +21,7 @@ var CounterModule = (function() {
         document.getElementById("total").innerHTML = `$${total}`;
         
         if (total > 0) {
-            document.getElementById("total").style.color = "black";
+            document.getElementById("total").style.color = "var(--dark-grey)";
             console.log(total);
             console.log("setting total to black");
         } else {
