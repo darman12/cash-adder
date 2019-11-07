@@ -53,11 +53,9 @@ footer > p {
   --light-shadow: rgb(187, 187, 187);
   --dark-shadow: rgb(97, 97, 97); }
 
-html {
+html, html * {
   font-family: 'Ubuntu', Arial, Helvetica, sans-serif;
-  font-size: 10px; }
-
-html * {
+  font-size: 10px;
   margin: 0;
   padding: 0; }
 
@@ -124,6 +122,25 @@ input::-webkit-inner-spin-button {
 input[type=number] {
   -moz-appearance: textfield;
   /* Firefox */ }
+
+#controls {
+  display: -webkit-box;
+  display: flex;
+  justify-content: space-around;
+  height: 5rem;
+  margin: .5rem;
+  padding-bottom: 1rem; }
+  #controls button {
+    width: 10rem;
+    height: 5rem;
+    font-size: 1.6rem;
+    background-color: transparent;
+    border: solid 0.5px var(--light-shadow);
+    border-radius: 30px; }
+  #controls button:hover {
+    cursor: pointer;
+    -o-box-shadow: 0 0 .75rem;
+    box-shadow: 0 0 .75rem #af44fc; }
 
 .dark-shadow {
   -o-box-shadow: 0 0 1.5rem;

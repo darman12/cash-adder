@@ -7,14 +7,6 @@ var Currency = (function() {
     let values = [];
     let representations = [];
 
-    // removes items from arrays
-    function reset() {
-        for (let i = getNumDenominations(); i > 0; i--) {
-            denominations.pop();
-            values.pop();
-            representations.pop();
-        }
-    }
     
     /********* Public functions **********/
     
@@ -34,6 +26,15 @@ var Currency = (function() {
         return denominations.length;
     }
 
+    // removes items from arrays
+    function reset() {
+        for (let i = getNumDenominations(); i > 0; i--) {
+            denominations.pop();
+            values.pop();
+            representations.pop();
+        }
+    }
+    
     function init(currency) {
         reset();
     
@@ -49,6 +50,7 @@ var Currency = (function() {
         getDenomination: getDenomination,
         getValue: getValue,
         getRepresentation: getRepresentation,
-        getNumDenominations: getNumDenominations
+        getNumDenominations: getNumDenominations,
+        reset: reset
     }
 }());
