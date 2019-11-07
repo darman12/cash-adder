@@ -106,8 +106,8 @@ p {
   border: solid 0.5px var(--light-shadow); }
 
 [type=number]:hover {
-  -o-box-shadow: 0 0 1.5rem;
-  box-shadow: 0 0 1.5rem #44c2fc; }
+  -o-box-shadow: 0 0 .75rem;
+  box-shadow: 0 0 .75rem #44c2fc; }
 
 [type=number]:focus {
   outline: none;
