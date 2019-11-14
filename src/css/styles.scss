@@ -120,6 +120,7 @@ input[type=number] {
     padding-bottom: 1rem;
 
     button {
+        outline: none;
 
         width: 10rem;
         height: 5rem;
@@ -129,9 +130,11 @@ input[type=number] {
 
         border: solid .5px var(--light-shadow);
         border-radius: 30px;
+
+
     }
 
-    button:hover {
+    button:hover, button:focus {
         cursor: pointer;
 
         -moz-box-shadow: 0 0 .75rem;
@@ -139,8 +142,9 @@ input[type=number] {
         -o-box-shadow: 0 0 .75rem;
         box-shadow: 0 0 .75rem #af44fc;
     }
-
-    #calculate-button:hover {
+    
+    #calculate-button:hover,
+    #calculate-button:focus {
         box-shadow: 0 0 .75rem #44c2fc;
     }
 }
