@@ -141,6 +141,8 @@ input[type=number] {
     cursor: pointer;
     -o-box-shadow: 0 0 .75rem;
     box-shadow: 0 0 .75rem #af44fc; }
+  #controls #calculate-button:hover {
+    box-shadow: 0 0 .75rem #44c2fc; }
 
 .dark-shadow {
   -o-box-shadow: 0 0 1.5rem;

@@ -41,8 +41,12 @@ var CounterModule = (function() {
 
         document.getElementById("clear").addEventListener('click', () => {
             document.querySelectorAll("input").forEach((inputField) => {
-                inputField.setAttribute("value", '');
+                inputField.value = '';
             });
+            
+            for (let i = 0; i < denominationQuantities.length; i++) {
+                denominationQuantities[i] = 0;
+            }
 
             total = 0;
             displayTotal();

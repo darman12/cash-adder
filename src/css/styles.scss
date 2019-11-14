@@ -139,6 +139,10 @@ input[type=number] {
         -o-box-shadow: 0 0 .75rem;
         box-shadow: 0 0 .75rem #af44fc;
     }
+
+    #calculate-button:hover {
+        box-shadow: 0 0 .75rem #44c2fc;
+    }
 }
 
 .dark-shadow {
