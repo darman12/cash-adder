@@ -1,5 +1,6 @@
 CounterModule.init([
     {denomination: "hundreds", value: 100, representation: "100"},
+    {denomination: "fifties", value: 50, representation: "50"},
     {denomination: "twenties", value: 20, representation: "20"},
     {denomination: "tens", value: 10, representation: "10"},
     {denomination: "fives", value: 5, representation: "5"},
