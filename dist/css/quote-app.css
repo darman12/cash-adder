@@ -131,17 +131,19 @@ input[type=number] {
   margin: .5rem;
   padding-bottom: 1rem; }
   #controls button {
+    outline: none;
     width: 10rem;
     height: 5rem;
     font-size: 1.6rem;
     background-color: transparent;
     border: solid 0.5px var(--light-shadow);
     border-radius: 30px; }
-  #controls button:hover {
+  #controls button:hover, #controls button:focus {
     cursor: pointer;
     -o-box-shadow: 0 0 .75rem;
     box-shadow: 0 0 .75rem #af44fc; }
-  #controls #calculate-button:hover {
+  #controls #calculate-button:hover,
+  #controls #calculate-button:focus {
     box-shadow: 0 0 .75rem #44c2fc; }
 
 .dark-shadow {
