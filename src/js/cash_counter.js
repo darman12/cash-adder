@@ -14,20 +14,16 @@ var CounterModule = (function() {
         } else {
             document.getElementById(event.target.id).value = 0;
         }
-        displayTotal(total);
+        displayTotal();
     }
     
-    function displayTotal(total) {
+    function displayTotal() {
         document.getElementById("total").innerHTML = `$${total}`;
         
         if (total > 0) {
             document.getElementById("total").style.color = "var(--dark-grey)";
-            console.log(total);
-            console.log("setting total to black");
         } else {
             document.getElementById("total").style.color = "var(--light-shadow)";
-            console.log(total);
-            console.log("setting total to grey");
         }
     }
     
@@ -42,6 +38,19 @@ var CounterModule = (function() {
         }
     
         createFields(currency, updateTotal);
+
+        document.getElementById("clear").addEventListener('click', () => {
+            document.querySelectorAll("input").forEach((inputField) => {
+                inputField.value = '';
+            });
+            
+            for (let i = 0; i < denominationQuantities.length; i++) {
+                denominationQuantities[i] = 0;
+            }
+
+            total = 0;
+            displayTotal();
+        });
     }
 
     return {
