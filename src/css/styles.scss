@@ -130,8 +130,11 @@ input[type=number] {
 
         border: solid .5px var(--light-shadow);
         border-radius: 30px;
+    }
 
-
+    // removes outline when button is focused ('outline: none' above works for the other browsers')
+    button::-moz-focus-inner {
+        border: 0;
     }
 
     button:hover, button:focus {
