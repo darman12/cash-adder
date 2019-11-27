@@ -12,7 +12,9 @@ function addInputField(denomination, index, callback) {
         {"id": `${index}`},
         {"name": `${denomination.getDenomination(index)}`},
         {"pattern": "[0-9]*"},
-        {"placeholder": "0"}
+        {"placeholder": "0"},
+        {"class": "glow"}
+        
     ]);
     
     newField.addEventListener('change', (event) => {

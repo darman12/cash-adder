@@ -1,4 +1,17 @@
 /***********
+* Contains style rules for the currency selector
+*/
+#currency-selector {
+  text-align: center; }
+
+#currency-list {
+  font-size: 1.6rem;
+  margin: 1rem;
+  padding: .5rem;
+  border: solid 0.5px var(--light-shadow);
+  border-radius: 30px; }
+
+/***********
 * Contains style rules for the footer I use across my sites/web apps.
 *
 * The HTML for the footer is at the bottom for convenience.
@@ -59,10 +72,15 @@ html, html * {
   margin: 0;
   padding: 0; }
 
+/* Font sizes */
 p {
   font-size: 1.6rem; }
 
-#wrapper {
+h1 {
+  font-size: 3.2rem;
+  color: var(--dark-grey); }
+
+.wrapper {
   position: relative;
   left: 50%;
   width: 230px;
@@ -103,11 +121,11 @@ p {
   border-radius: 30px;
   border: solid 0.5px var(--light-shadow); }
 
-[type=number]:hover {
+.glow:hover {
   -o-box-shadow: 0 0 .75rem;
   box-shadow: 0 0 .75rem #44c2fc; }
 
-[type=number]:focus {
+.glow:focus {
   outline: none;
   -o-box-shadow: 0 0 1.5rem;
   box-shadow: 0 0 1.5rem #44c2fc; }

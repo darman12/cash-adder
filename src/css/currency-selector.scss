@@ -1,0 +1,16 @@
+/***********
+* Contains style rules for the currency selector
+*/
+
+#currency-selector {
+    text-align: center;
+}
+
+#currency-list {
+    
+    font-size: 1.6rem;
+    margin: 1rem;
+    padding: .5rem;
+    border: solid .5px var(--light-shadow);
+    border-radius: 30px;
+}

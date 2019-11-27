@@ -19,11 +19,14 @@ html, html * {
     padding: 0;
 }
 
-p {
-    font-size: 1.6rem;
+/* Font sizes */
+p { font-size: 1.6rem; }
+h1 { 
+    font-size: 3.2rem;
+    color: var(--dark-grey);
 }
 
-#wrapper {
+.wrapper {
     position: relative;
     left: 50%;
     width: 230px;
@@ -82,7 +85,7 @@ p {
     
 }
 
-[type = number]:hover {
+.glow:hover {
     -moz-box-shadow: 0 0 .75rem;
     -webkit-box-shadow: 0 0 .75rem;
     -o-box-shadow: 0 0 .75rem;
@@ -90,7 +93,7 @@ p {
     
 }
 
-[type = number]:focus {
+.glow:focus {
     outline: none;
 
     -moz-box-shadow: 0 0 1.5rem;
